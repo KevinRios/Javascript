@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 1 JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</head>
+<body>
+    <h1> Practicando JS </h1>
+    <script>
+        //mostramos informacion por consola
+        console.log("Hola");
+
+        //variables
+        let nombre = "Kevin";
+        let apellido = "Rios";
+        let edad = 28;
+        let esCasado = false;
+        let familia = ["Juana", "Claudia", "Aixa", "Naomi", "Roma"]
+        let dato = null;
+        let auto = {
+            //propiedad: valor
+            marca: "Volkswagen",
+            modelo: "Trend",
+            anio: 2015
+        };
+        
+        /*
+         // muestro los datos por consola
+        console.log("Nombre:  " + nombre + " Apellido: " + apellido + " Edad: " +edad);
+        console.log(esCasado);
+        console.log(familia);
+        console.log(auto);
+        */
+
+        // imprimir en el DOM
+        document.write(nombre + "  " + apellido);
+
+        // probando el tipo de dato
+        console.log("10"+10);
+        console.log("10"==10);
+        console.log("10"===10);
+
+        // condicionales 
+        let valor1 = 10; 
+        let valor2 = 20;
+        let resultado = 0;
+        let operacion = "";
+
+        if(valor1>valor2){
+            resultado = valor1+valor2;
+            operacion = "SUMA";            
+        }else{
+            resultado = valor1*valor2;
+            operacion = "MULTIPLICACION";  
+        }
+        console.log(resultado);
+
+        document.write("<h2>" +" La "+operacion +" de " +valor1+ " + " +valor2+" es de: " +resultado+ "</h2>");
+
+
+        
+        // MICRO DESAFIO
+        let numero = 10;
+
+        
+       (numero%2 == 0) ? console.log( "Es par") : console.log( "Es impar");
+        
+
+        /* otra forma 
+         
+         let resultadoTernario = (numero%2==0)? a+b : a*b
+        console.log(resultado);
+        */
+
+
+
+        // MICRO DESAFIO
+
+        let clave = "123456";
+        
+        (clave == 123456) ? document.write("<h2> Bienvenido </h2>"): document.write("<h2> error </h2>") ;
+        
+
+        document.write("<hr> <hr>");
+
+        // capturar datos
+        let nombreUsuario = prompt("Indique su nombre");
+        document.write("Bienvenido " +nombreUsuario);
+
+        // alert - pantalla para mostrar informacion al usuario
+        alert("Bienvenido " +nombreUsuario);
+
+
+        // confirm
+        let respuesta = confirm("Desea continuar?");
+        console.log(respuesta);
+        
+        Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+)
+
+
+
+    </script>    
+    
+</body>
+</html>
